@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="js/osubackup.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <title>Osu BackUp!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Osu BackUp!</h1>
+    </div>
+    <h3>Designed to save your ass and download your <u>300+ osu beatmaps</u> without writing them down!</h3>
+
+    <label id="message">Type your osu! folder path:</label>
+    <input class="u-full-width" placeholder="C:\Users\<Username>\AppData\Local\osu!" id="osuDir" onclick="findFile()">
+    <button id="btnRecover" class="button-primary u-full-width" onclick="makeBackUp()">Generate BackUp list</button>
+    <button id="btnBackUp" class="button-primary u-full-width" onclick="downloadBeatmaps()">Download from BackUp</button>
+
+    <a class="button u-full-width" target="_blank" href="https://github.com/ThePridestalker">github</a>
+    <a class="button u-full-width" target="_blank" href="https://twitter.com/AxelLol95">twitter</a>
+
+  </div>
+</body>
+
+</html>

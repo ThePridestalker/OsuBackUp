@@ -1,0 +1,30 @@
+{
+  "name": "osubackup",
+  "version": "1.0.0",
+  "description": "backup your songs and download them all after losing them",
+  "main": "main.js",
+  "author": "Axel@ThePridestalker",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^3.0.5",
+    "electron-builder": "^20.38.4"
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "postinstall": "electron-builder install-app-deps",
+  "build": {
+    "productName": "OsuBackUp",
+    "mac": {
+      "category": "public.app-category.entertainment"
+    },
+    "win": {
+      "target": [
+        "portable"
+      ]
+    }
+  }
+}
