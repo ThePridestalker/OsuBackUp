@@ -1,5 +1,5 @@
 # ![alt text](https://i.nuuls.com/qOE_2.png) OsuBackUp
-OsuBackUp is an app designed to backup and then download automatically all your osu! songs when needed.
+OsuBackUp is an app designed to backup and then download automatically all your osu! songs when needed. It uses [Ripple](https://ripple.moe/) server to download the beatmaps without limits.
 
 ## The interface
 
