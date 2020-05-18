@@ -20,8 +20,8 @@
 
     <label id="message">Type your osu! folder path:</label>
     <input class="u-full-width" placeholder="C:\Users\<Username>\AppData\Local\osu!" id="osuDir" onclick="findFile()">
-    <button id="btnRecover" class="button-primary u-full-width" onclick="makeBackUp()">Generate BackUp list</button>
-    <button id="btnBackUp" class="button-primary u-full-width" onclick="downloadBeatmaps()">Download from BackUp</button>
+    <button id="btnRecover" class="button-primary u-full-width" onclick="backupGen.makeBackUp()">Generate BackUp list</button>
+    <button id="btnBackUp" class="button-primary u-full-width" onclick="fileDownloader.readBackup()">Download from BackUp</button>
 
     <a class="button u-full-width" target="_blank" href="https://github.com/ThePridestalker">github</a>
     <a class="button u-full-width" target="_blank" href="https://twitter.com/AxelLol95">twitter</a>
