@@ -1,8 +1,9 @@
 const fs = require("fs");
 const https = require("https");
 const readLine = require("readline");
-const exePath = process.env.PORTABLE_EXECUTABLE_DIR;
-const { dialog } = require("electron").remote;
+// const exePath = process.env.PORTABLE_EXECUTABLE_DIR; ALWAYS WAS DEPRECATED, ONLY USED FOR DEBUGGING ON RUNTIME!
+const exePath = process.cwd();
+const { dialog } = require("electron");
 const backupGen = require("./js/backupGen");
 const fileDownloader = require("./js/fileDownloader");
 
