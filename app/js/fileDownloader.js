@@ -1,6 +1,7 @@
 const fs = require("fs");
 const readLine = require("readline");
-const exePath = process.env.PORTABLE_EXECUTABLE_DIR;
+// const exePath = process.env.PORTABLE_EXECUTABLE_DIR; ALWAYS WAS DEPRECATED, ONLY USED FOR DEBUGGING ON RUNTIME!
+const exePath = process.cwd();
 
 function readBackup() {
   let queue = [];
@@ -8,7 +9,7 @@ function readBackup() {
 
   if (fs.existsSync(`${exePath}/BackUp/downloadList.txt`)) {
     message.textContent =
-      "Your beatmaps are being downloaded into the DownloadedBeatmaps folder!";
+      "Your beatmaps are being downloaded into the Downloaded Beatmaps folder!";
 
     var dir = `${exePath}/DownloadedBeatmaps`;
     if (!fs.existsSync(dir)) {

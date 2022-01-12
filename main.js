@@ -1,12 +1,23 @@
 const { app, BrowserWindow } = require('electron')
-
+const path = require('path')
 // Mantén una referencia global del objeto window, si no lo haces, la ventana 
 // se cerrará automáticamente cuando el objeto JavaScript sea eliminado por el recolector de basura.
 let win
 
 function createWindow() {
   // Crea la ventana del navegador.
-  win = new BrowserWindow({ width: 700, height: 650, resizable: false })
+  win = new BrowserWindow({
+    width: 700, 
+    height: 650, 
+    resizable: false,
+    webPreferences: {
+      preload: path.join(__dirname, './app/js/osubackup.js'),
+      preload: path.join(__dirname, './app/js/fileDownloader.js'),
+      preload: path.join(__dirname, './app/js/backupGen.js'),
+      nodeIntegration: true,
+      contextIsolation: false,
+    } 
+  })
 
   // y carga el archivo index.html de la aplicación.
   win.loadFile('app/index.html')

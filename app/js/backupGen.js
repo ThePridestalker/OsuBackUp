@@ -1,5 +1,7 @@
 const fs = require("fs");
-const exePath = process.env.PORTABLE_EXECUTABLE_DIR;
+// const exePath = process.env.PORTABLE_EXECUTABLE_DIR; ALWAYS WAS DEPRECATED, ONLY USED FOR DEBUGGING ON RUNTIME!
+const exePath = process.cwd();
+console.info(exePath)
 
 function makeBackUp() {
   const osuDir = document.getElementById("osuDir").value;
