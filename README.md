@@ -44,14 +44,29 @@ This one is a bit tricky since its not the main usage of this tool, but you can 
 ### Linux (Debian & Ubuntu-based distros)
 - Open terminal with <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>
 
-- install package dependencies with `sudo apt install npm git`
+- install package dependencies with 
+  ```sudo apt install npm git```
 
-- go to your Downloads folder and run: `git clone https://github.com/ThePridestalker/OsuBackUp.git && cd OsuBackUp`
+- go to your Downloads folder and run: 
+  ```git clone https://github.com/ThePridestalker/OsuBackUp.git && cd OsuBackUp```
 
-- install project dependencies with: `npm install`
+- install project dependencies with: 
+  ```npm install```
 
 For compiling you have two options, you can either optimize the **electron-builder** command to fit your needs yourself, or compile using the default and more compatible way, running `npm run deps && npm run linux-compile`, which install **only needed additional packages** and compiles for **i386-pc and x86_64 builds**. Don't forget that the **.AppImage** file is what we want to run, so we don't need to install the *debian* package and remove every time we compile. Install by your own if you're happy with the results!
 
-Keep in mind that, if you use **Ubuntu**, **DO NOT INSTALL THE .snap PACKAGE INTO YOUR SYSTEM!** Even tho it does not harm your system, snap is really bloated, and if you already installed it by an accident of some kind, run `snap remove --purge osubackup`, i personally don't recommend using *snap/snapd*, as it's slow and occupies a lot of space, change what you can to *.deb* packages instead. 
+If compiling does not work for your for some reason, verify your kernel version and architecture. if still isn't clear, [report an issue](https://github.com/ThePridestalker/OsuBackUp/issues)
 
-If compiling does not work for your for some reason, verify your kernel version and architecture. if still isn't clear, [report an issue](https://github.com/ThePridestalker/OsuBackUp/issues). If you're looking foward to extract the archive or take all-in-one **.tar.xz** archive file, simply run `electron-builder --linux deb tar.xz`
+### Linux (Arch-based distros)
+- Open the terminal with <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>
+  
+- install package dependencies with 
+  ```sudo pacman -Syu npm git zenity kdialog xdialog```
+  
+- Go to your Downloads folder and run: 
+  ```git clone https://github.com/ThePridestalker/OsuBackUp.git && cd OsuBackUp```
+  
+- install project dependencies with 
+  ```npm install```
+  
+For compiling you have two options, you can either optimize the **electron-builder** command to fit your needs yourself, or compile using the default and more compatible way, running `npm run deps && npm run linux-compile`, which install **only needed additional packages** and compiles for **i386-pc (32 & 64 bits)**. Don't forget that the **.AppImage** file is what we want to run. Install if you're happy with the results!

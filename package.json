@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "backup your songs and download them all after losing them",
   "main": "main.js",
-  "author": "Axel@ThePridestalker",
+  "author": "Axel@ThePridestalker <no-reply@osubackup.com>",
   "bugs": "https://github.com/ThePridestalker/OsuBackUp/issues",
   "contributors": [
     {
@@ -34,7 +34,10 @@
   "build": {
     "productName": "OsuBackUp",
     "linux": {
-      "category": "Utility, Game"
+      "category": "Utility, Game",
+      "target": [
+        "deb", "AppImage", "tar.xz"
+      ]
     },
     "mac": {
       "category": "public.app-category.entertainment"

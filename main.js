@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain, ipcRenderer } = require('electron')
 const path = require('path')
 // Mantén una referencia global del objeto window, si no lo haces, la ventana 
 // se cerrará automáticamente cuando el objeto JavaScript sea eliminado por el recolector de basura.
@@ -10,6 +10,7 @@ function createWindow() {
     width: 700, 
     height: 650, 
     resizable: false,
+    icon: path.join(__dirname, './build/icon.png'),
     webPreferences: {
       preload: path.join(__dirname, './app/js/osubackup.js'),
       preload: path.join(__dirname, './app/js/fileDownloader.js'),

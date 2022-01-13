@@ -9,7 +9,7 @@ function readBackup() {
 
   if (fs.existsSync(`${exePath}/BackUp/downloadList.txt`)) {
     message.textContent =
-      "Your beatmaps are being downloaded into the DownloadedBeatmaps folder!";
+      "Your beatmaps are being downloaded into the Downloaded Beatmaps folder!";
 
     var dir = `${exePath}/DownloadedBeatmaps`;
     if (!fs.existsSync(dir)) {
