@@ -8,7 +8,7 @@
   "dependencies": {},
   "devDependencies": {
     "electron": "15.5.5",
-    "electron-builder": "22.3.0"
+    "electron-builder": "22.14.13"
   },
   "scripts": {
     "start": "electron .",
