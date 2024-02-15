@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "electron": "19.0.6",
+    "electron": "28.2.3",
     "electron-builder": "23.1.0"
   },
   "scripts": {
